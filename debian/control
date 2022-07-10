@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Colin Botes <costin.botescu@gmail.com>
 Build-Depends: debhelper-compat (= 11), dh-autoreconf, bison, flex, libpng-dev
 Standards-Version: 4.5.0
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://github.com/colin-i/ming
 
 Package: libmingutils
 Architecture: i386 amd64
