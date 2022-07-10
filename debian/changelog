@@ -1,3 +1,9 @@
+libmingutils (0.4.5-2) bionic; urgency=medium
+
+  * testing build files (they where recreated)
+
+ -- bc <bc@bc-HP-Pavilion-x360-Convertible>  Sun, 10 Jul 2022 08:10:40 +0300
+
 libmingutils (0.4.5-1ubuntu1) bionic; urgency=medium
 
   * debhelper 11
