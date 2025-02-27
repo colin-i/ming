@@ -10,7 +10,7 @@ jobs:
    - name: Run a multi-line script
      run: |
       sudo apt update
-      sudo apt install -y bison flex libpng-dev libgif-dev
+      sudo apt install -y bison flex libpng-dev libgif-dev libfreetype-dev
       ./autogen.sh
       CFLAGS="-fcommon" ./configure
       make
