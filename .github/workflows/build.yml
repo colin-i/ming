@@ -1,6 +1,6 @@
 on:
  workflow_dispatch:
- push: -- Add this here
+# push: -- Add this here
 
 jobs:
  abuild:
