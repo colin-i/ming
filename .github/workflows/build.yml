@@ -1,0 +1,25 @@
+on:
+ workflow_dispatch:
+ push: -- Add this here
+
+jobs:
+ abuild:
+  runs-on: ubuntu-24.04-arm
+  steps:
+   - uses: actions/checkout@v4
+   - name: Run a multi-line script
+     run: |
+      sudo apt update
+      sudo apt install -y bison flex libpng-dev libgif-dev
+      ./autogen.sh
+      CFLAGS="-fcommon" ./configure
+      make
+      mkdir build
+      DESTDIR=`pwd`/build make install
+      tar -cf build.tar build
+      echo "filepath=./build.tar" >> $GITHUB_ENV
+   - name: artifact
+     uses: actions/upload-artifact@v4
+     with:
+      name: release
+      path: ${{ env.filepath }}
